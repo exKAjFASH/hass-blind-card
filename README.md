@@ -2,7 +2,8 @@
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge)](https://github.com/custom-components/hacs)
 
-This card allows to open, close or set a blind to the position you want. The Color of the blind can also be defined. This is a fork of the Shutter Card by Deejayfool
+This card allows to open, close or set a blind to the position you want. The Color of the blind can also be defined. 
+This is a fork of the Blind Card by tungmeister. I needed a option to invert the up/down commands.
 
 ![blind card](https://raw.githubusercontent.com/tungmeister/hass-blind-card/master/images/blind-anim.gif)
 
@@ -24,6 +25,7 @@ This card allows to open, close or set a blind to the position you want. The Col
 | buttons_position | string | False | `left` | Set buttons on `left` or on `right` of the blind
 | title_position | string | False | `top` | Set title on `top` or on `bottom` of the blind
 | invert_percentage | boolean | False | `false` | Set it to `true` if your blind is 100% when it is closed, and 0% when it is opened
+| invert_commands | boolean | False | `false` | Set it to true if you want to invert the up/down buttons to match your motors direction
 | blind_color | string | False | 'white' | Set blind Color e.g. `green` or hex `#00FF00`
 
 _Remark : you can also just give the entity ID (without to specify `entity:`) if you don't need to specify the other configurations._

@@ -38,6 +38,11 @@ class BlindCard extends HTMLElement {
           invertPercentage = entity.invert_percentage;
         }
 
+        let invertCommands = false;
+        if (entity && entity.invert_commands) {
+          invertCommands = entity.invert_commands;
+        }
+
         let blindColor = '#ffffff'
         if (entity && entity.blind_color) {
           blindColor = entity.blind_color;
@@ -149,11 +154,11 @@ class BlindCard extends HTMLElement {
                 
                 switch (command) {
                   case 'up':
-                      service = 'open_cover';
+                      service = !invertCommands ? 'open_cover' : 'close_cover';
                       break;
                       
                   case 'down':
-                      service = 'close_cover';
+                      service = !invertCommands ? 'close_cover' : 'open_cover';
                       break;
                 
                   case 'stop':
